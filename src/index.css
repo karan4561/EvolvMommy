@@ -62,7 +62,7 @@ nav {
 }
 
 .nav__links li {
-  margin: 0 10px;
+  margin: 0 12px;
 }
 
 .nav__links li a {
@@ -83,7 +83,7 @@ nav {
   background-color: var(--clr-black);
   color: var(--clr-white);
 
-  border: none;
+  border:#8f8f8f;
 
   font-family: "Open Sans";
   font-size: 1.10em;
@@ -118,8 +118,9 @@ header {
 }
 
 .header__subtitle {
-  margin: 0 0 25px 75px;
-  padding-top: 100px;
+  margin: 80 0 60px 550px;
+  padding-top: 60px;
+  padding-left: 100px;
 
   font-family: "Open Sans";
   font-size: 1em;
@@ -128,15 +129,18 @@ header {
 }
 
 .header__title {
-  margin: 0 0 25px 75px;
+  margin: 0 0 25px 95px;
 
   font-family: "Merriweather";
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
+  padding-top: 80px;
+  text-align: center
 }
 
 .header__search {
   display: flex;
+  padding-top: 30px;
 }
 
 .header__input {
@@ -171,7 +175,7 @@ header {
 .header__search::placeholder {
   font-family: "Open Sans";
   font-size: 1.25em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* ------------------------------------------------------ */
@@ -199,7 +203,7 @@ header {
 }
 
 .card {
-  display: grid;
+  display:grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
 
@@ -306,5 +310,43 @@ header {
 
   .nav__connect {
     margin: 0 50px 0 auto;
+  }
+}
+
+/* Header */
+.large-header {
+  position: relative;
+  width: 100%;
+  background: #333;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+#large-header {
+  background-image: url("https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg");
+}
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+.demo-1 .main-title {
+  text-transform: uppercase;
+  font-size: 4.2em;
+  letter-spacing: 0.1em;
+}
+.main-title .thin {
+  font-weight: 200;
+}
+@media only screen and (max-width: 768px) {
+  .demo-1 .main-title {
+    font-size: 3em;
   }
 }
